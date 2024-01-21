@@ -1,0 +1,21 @@
+<nav class="mx-auto bg-blackout text-gray-300 font-bold md:flex md:items-center p-4 md:justify-between">
+    
+    <div class="flex justify-between items-center">
+        <!--section logo-->
+
+       <a routerLink="/"><img class="cursor-pointer" src="/assets/images/logo_1.svg" alt=""></a>
+        <svg (click)="toggleMenu()" viewBox="0 0 24 24" class="h-8 w-8 stroke-slate-50 cursor-pointer md:hidden block">
+            <path *ngIf="!menuOpen" d="M3.75 12h16.5M3.75 6.75h16.5M3.75 17.25h16.5" fill="none" stroke-width="1.5" stroke-linecap="round"></path>
+            <path *ngIf="menuOpen" d="M6 6l12 12M18 6l-12 12" fill="none" stroke-width="1.5" stroke-linecap="round"></path>
+        </svg>
+    </div>
+
+    <!--section menu responsive-->
+    <ul [ngStyle]="myStyles" class="gap-6 absolute bg-blackout w-full left-0 py-4 pl-7 md:static md:flex md:items-center md:w-auto md:py-0 md:pl-0 md:opacity-100">
+        <li class="cursor-pointer p-4 hover:text-gray-500"><a routerLink="/">INICIO</a></li>
+        <li class="cursor-pointer p-4 hover:text-gray-500"><a routerLink="/productos" routerLinkActive="active">PRODUCTOS</a></li>
+        <li class="cursor-pointer p-4 hover:text-gray-500"><a routerLink="/contacto" routerLinkActive="active">CONTACTENOS</a></li>
+        <li class="cursor-pointer p-4 hover:text-gray-500"><a routerLink="/nosotros" routerLinkActive="active">NOSOTROS</a></li>
+    </ul>
+      
+</nav>
