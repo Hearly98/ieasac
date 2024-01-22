@@ -1,0 +1,29 @@
+<div class="flex my-5">
+    <input type="text" class="border-2 w-full rounded-s-lg">
+    <div class="bg-blackout rounded-e-lg p-1 ">
+        <span class="icon-[mdi--search] text-white w-8 h-8 border-2"></span>
+    </div>
+  </div>
+<section class="bg-white font-medium p-5 border border-zinc-300 rounded-xl">
+  <table>
+    <h3 class="text-2xl text-center p-3 font-semibold">Filtrar Productos</h3>
+    <thead>
+        <tr>
+            <th scope="col"  class="py-4 text-xl font-medium">Categorías</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (categoria of categoriasProductos; track $index) {
+            <tr>
+                <td class="text-base">
+                <input class="" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                {{categoria.nombre}}</td>
+            </tr>
+        }
+    </tbody>
+  </table>
+  <div>
+    <button type="submit" class="text-white my-4 bg-red-500 hover:bg-red-500 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center ">Filtrar</button>
+
+  </div>
+</section>

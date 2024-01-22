@@ -3,6 +3,7 @@ import { IndexComponent } from './pages/index/index.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { NosotrosComponent } from './pages/nosotros/nosotros.component';
 import { IconsComponent } from './components/icons/icons.component';
+import { ProductosComponent } from './pages/productos/productos.component';
 
 export const routes: Routes = [
      {
@@ -18,7 +19,7 @@ export const routes: Routes = [
         component:NosotrosComponent
     },
     {
-        path:'icons',
-        component:IconsComponent
+        path:'productos',
+        component:ProductosComponent
     }
 ];
